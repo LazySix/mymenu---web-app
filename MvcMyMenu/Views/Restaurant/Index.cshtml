@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MvcMyMenu.Models.Restaurant>
+@{
+    ViewBag.Title = "Restaurants";
+}
+
+<h2>Browse restaurants</h2>
+<p>Select from @Model.Count() restaurants:</p>
+<ul>
+    @foreach (var restaurant in Model)
+    {
+        <li>@Html.ActionLink(restaurant.Name, "Browse", new
+            {
+                restaurant = restaurant.Name
+            
+            })</li>
+    }
+</ul>

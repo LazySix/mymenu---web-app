@@ -1,0 +1,55 @@
+﻿@model List<MvcMyMenu.Models.Menu>
+@{
+    ViewBag.Title = "MyMenu";
+}
+<style>
+            .round {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 150px;
+                height: 150px;
+            }
+            .round img {
+                display: block;
+            /*Stretch*/ 
+                  height: 100%;
+                  width: 100%; 
+            min-width: 100%;
+            min-height: 100%;
+            }
+            h2 {
+                text-align: center;
+            }
+        </style>
+<div class ="round">
+<img src="~/Image/Food_Glorious_Food.png"/>
+</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+    </div>
+</nav>
+@*<ul id="menu-list">
+    @foreach (var menu in Model)
+    {
+        <li><a href='@Url.Action("Details", "Restaurant", new {id = menu.MenuId})'></a>
+            <span>@menu.Name</span>
+        </li>
+    }
+</ul>*@
+
+<div class="content-wrapper">
+    <div class="float-left">
+        @*<p class="site-title">@Html.ActionLink("Home", "Index", "Home")</p>*@
+    </div>
+    <div class="float-right">
+        <nav class="navbar navbar-inverse">
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Restaurant", "Index", "Restaurant")</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
